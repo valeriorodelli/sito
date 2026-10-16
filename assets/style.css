@@ -112,3 +112,10 @@
   .wcard h3 { margin: 6px 0 10px; font-size: 24px; }
   .wcard.soon { opacity: .7; }
   .wcard.soon:hover { border-color: var(--line); }
+
+  .dates { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  .date-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
+  .date-card .when { color: var(--teal); font-weight: 800; font-size: 15px; line-height: 1.35; }
+  .date-card b { font-size: 16px; }
+  .date-card b a { color: var(--text); }
+  .date-card .where-d { color: var(--muted); font-size: 14.5px; }

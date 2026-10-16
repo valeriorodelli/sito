@@ -23,14 +23,31 @@
   if (!list.length) {
     box.innerHTML = '<p class="lead" style="margin:0"><span lang="en">New dates coming soon.</span><span lang="it">Nuove date in arrivo.</span></p>';
   } else {
-    box.innerHTML = list.map(function (d) {
-      var dt = new Date(d.date + 'T00:00:00');
-      var day = dt.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
-      var giorno = dt.toLocaleDateString('it-IT', { day: '2-digit', month: 'short', year: 'numeric' });
-      var proj = names[d.project] ? '<a href="' + pages[d.project] + '">' + names[d.project] + '</a>' : '';
-      var more = d.link ? ' · <a href="' + esc(d.link) + '">info</a>' : '';
-      return '<div class="row"><div class="y"><span lang="en">' + day + '</span><span lang="it">' + giorno + '</span></div><div><b>' + proj + (proj && (d.en || d.it) ? ' · ' : '') + '<span lang="en">' + esc(d.en) + '</span><span lang="it">' + esc(d.it || d.en) + '</span></b><span>' + esc(d.venue) + (d.venue && d.place ? ', ' : '') + esc(d.place) + more + '</span></div></div>';
-    }).join('');
+    // raggruppa le date dello stesso spettacolo nello stesso posto
+    var groups = [], key = {};
+    list.forEach(function (d) {
+      var k = [d.project, d.en, d.venue, d.place].join('|');
+      if (!key[k]) { key[k] = { d: d, dates: [] }; groups.push(key[k]); }
+      key[k].dates.push(new Date(d.date + 'T00:00:00'));
+    });
+    function fmt(dates, loc) {
+      var out = [], byMonth = {};
+      dates.forEach(function (dt) {
+        var m = dt.toLocaleDateString(loc, { month: 'short', year: 'numeric' });
+        (byMonth[m] = byMonth[m] || []).push(dt.getDate());
+      });
+      Object.keys(byMonth).forEach(function (m) { out.push(byMonth[m].join(' · ') + ' ' + m); });
+      return out.join('<br>');
+    }
+    box.innerHTML = '<div class="dates">' + groups.map(function (g) {
+      var d = g.d, proj = names[d.project] ? '<a href="' + pages[d.project] + '">' + names[d.project] + '</a>' : '';
+      var title = proj ? proj + (d.en && d.en !== 'Concert' && d.en !== 'Bal folk' ? '' : '') : '';
+      var what = '<span lang="en">' + esc(d.en) + '</span><span lang="it">' + esc(d.it || d.en) + '</span>';
+      var more = d.link ? '<a class="go" href="' + esc(d.link) + '">info →</a>' : '';
+      return '<div class="date-card"><div class="when"><span lang="en">' + fmt(g.dates, 'en-GB') + '</span><span lang="it">' + fmt(g.dates, 'it-IT') + '</span></div>' +
+        '<b>' + (proj ? proj + ' · ' : '') + what + '</b>' +
+        '<span class="where-d">' + esc(d.venue) + (d.venue && d.place ? ', ' : '') + esc(d.place) + '</span>' + more + '</div>';
+    }).join('') + '</div>';
   }
   var nb = document.getElementById('news-list');
   if (nb) nb.innerHTML = (window.SITE_NEWS || []).map(function (n) { return '<li><span lang="en">' + esc(n.en) + '</span><span lang="it">' + esc(n.it || n.en) + '</span></li>'; }).join('');
