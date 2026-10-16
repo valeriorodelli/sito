@@ -113,11 +113,16 @@
   .wcard.soon { opacity: .7; }
   .wcard.soon:hover { border-color: var(--line); }
 
-  .dates { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
-  .date-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
-  .date-card .when { color: var(--teal); font-weight: 800; font-size: 15px; line-height: 1.35; }
-  .date-card b { font-size: 16px; }
-  .date-card b a { color: var(--text); }
-  .date-card .where-d { color: var(--muted); font-size: 14.5px; }
-  .date-card .dline { display: flex; flex-direction: column; }
-  .date-card .when { font-size: 14.5px; }
+  .dates { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .date-card { position: relative; display: flex; flex-direction: column; gap: 6px; min-height: 280px; padding: 22px; border-radius: 18px; border: 1px solid var(--line); border-top: 4px solid var(--c); background-color: var(--panel); background-size: cover; background-position: center; color: var(--text); overflow: hidden; transition: transform .15s; }
+  a.date-card:hover { text-decoration: none; transform: translateY(-3px); }
+  .dlabel { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--c); }
+  .dtitle { font-size: 28px; font-weight: 800; line-height: 1.1; letter-spacing: -.01em; }
+  .dbig { margin-top: 8px; display: block; }
+  .dbig > span { display: flex; flex-direction: column; }
+  .bigday { font-size: 64px; font-weight: 800; line-height: 1; color: var(--c); }
+  .bigrange { font-size: 30px; font-weight: 800; line-height: 1.1; color: var(--c); }
+  .bigmonth { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text); margin-top: 4px; }
+  html[data-lang="en"] .dbig > span[lang="it"], html[data-lang="it"] .dbig > span[lang="en"] { display: none !important; }
+  .dplaces { list-style: none; margin: auto 0 0; padding: 10px 0 0; border-top: 1px solid rgba(255,255,255,.15); display: grid; gap: 6px; font-size: 14.5px; }
+  .dplaces li span { display: block; color: var(--muted); }
