@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://valeriorodelli.net/sitemap.xml
