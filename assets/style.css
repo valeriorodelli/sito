@@ -119,3 +119,5 @@
   .date-card b { font-size: 16px; }
   .date-card b a { color: var(--text); }
   .date-card .where-d { color: var(--muted); font-size: 14.5px; }
+  .date-card .dline { display: flex; flex-direction: column; }
+  .date-card .when { font-size: 14.5px; }

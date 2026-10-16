@@ -23,30 +23,33 @@
   if (!list.length) {
     box.innerHTML = '<p class="lead" style="margin:0"><span lang="en">New dates coming soon.</span><span lang="it">Nuove date in arrivo.</span></p>';
   } else {
-    // raggruppa le date dello stesso spettacolo nello stesso posto
+    // un riquadro per spettacolo; dentro, una riga per posto con le sue date
     var groups = [], key = {};
     list.forEach(function (d) {
-      var k = [d.project, d.en, d.venue, d.place].join('|');
-      if (!key[k]) { key[k] = { d: d, dates: [] }; groups.push(key[k]); }
-      key[k].dates.push(new Date(d.date + 'T00:00:00'));
+      var k = [d.project, d.en].join('|');
+      if (!key[k]) { key[k] = { d: d, places: [], pk: {} }; groups.push(key[k]); }
+      var g = key[k], pl = [d.venue, d.place].join('|');
+      if (!g.pk[pl]) { g.pk[pl] = { venue: d.venue, place: d.place, dates: [] }; g.places.push(g.pk[pl]); }
+      g.pk[pl].dates.push(new Date(d.date + 'T00:00:00'));
     });
     function fmt(dates, loc) {
-      var out = [], byMonth = {};
+      var out = [], byMonth = {}, order = [];
       dates.forEach(function (dt) {
         var m = dt.toLocaleDateString(loc, { month: 'short', year: 'numeric' });
-        (byMonth[m] = byMonth[m] || []).push(dt.getDate());
+        if (!byMonth[m]) { byMonth[m] = []; order.push(m); }
+        byMonth[m].push(dt.getDate());
       });
-      Object.keys(byMonth).forEach(function (m) { out.push(byMonth[m].join(' · ') + ' ' + m); });
-      return out.join('<br>');
+      return order.map(function (m) { return byMonth[m].join(' · ') + ' ' + m; }).join(', ');
     }
     box.innerHTML = '<div class="dates">' + groups.map(function (g) {
-      var d = g.d, proj = names[d.project] ? '<a href="' + pages[d.project] + '">' + names[d.project] + '</a>' : '';
-      var title = proj ? proj + (d.en && d.en !== 'Concert' && d.en !== 'Bal folk' ? '' : '') : '';
+      var d = g.d, proj = names[d.project] ? '<a href="' + pages[d.project] + '">' + names[d.project] + '</a> · ' : '';
       var what = '<span lang="en">' + esc(d.en) + '</span><span lang="it">' + esc(d.it || d.en) + '</span>';
+      var rows = g.places.map(function (p) {
+        return '<div class="dline"><span class="when"><span lang="en">' + fmt(p.dates, 'en-GB') + '</span><span lang="it">' + fmt(p.dates, 'it-IT') + '</span></span>' +
+          '<span class="where-d">' + esc(p.venue) + (p.venue && p.place ? ', ' : '') + esc(p.place) + '</span></div>';
+      }).join('');
       var more = d.link ? '<a class="go" href="' + esc(d.link) + '">info →</a>' : '';
-      return '<div class="date-card"><div class="when"><span lang="en">' + fmt(g.dates, 'en-GB') + '</span><span lang="it">' + fmt(g.dates, 'it-IT') + '</span></div>' +
-        '<b>' + (proj ? proj + ' · ' : '') + what + '</b>' +
-        '<span class="where-d">' + esc(d.venue) + (d.venue && d.place ? ', ' : '') + esc(d.place) + '</span>' + more + '</div>';
+      return '<div class="date-card"><b>' + proj + what + '</b>' + rows + more + '</div>';
     }).join('') + '</div>';
   }
   var nb = document.getElementById('news-list');
