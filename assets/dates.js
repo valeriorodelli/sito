@@ -5,20 +5,20 @@
   Le novità (news) restano finché non le togli.
 */
 window.SITE_DATES = [
-  // { date: "2026-11-21", project: "roma", place: "Bern", venue: "Nome del locale", it: "Bal folk", en: "Bal folk", link: "" },
-  { date: "2026-10-30", project: "roma", place: "Roma", venue: "La Mistica", it: "Bal folk", en: "Bal folk" },
-  { date: "2026-12-04", project: "archaic", place: "Roma", venue: "Pianeta Sonoro", it: "Concerto", en: "Concert" },
-  { date: "2026-12-18", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111" },
-  { date: "2026-12-19", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111" },
-  { date: "2026-12-20", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111" },
-  { date: "2026-12-30", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111" },
-  { date: "2026-12-31", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111" },
-  { date: "2027-01-14", project: "altro", place: "Langenthal", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111" },
-  { date: "2027-01-21", project: "altro", place: "Winterthur", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111" },
-  { date: "2027-01-23", project: "altro", place: "Winterthur", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111" },
-  { date: "2027-01-24", project: "altro", place: "Winterthur", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111" },
+  // { date: "2026-11-21", project: "roma", place: "Bern", venue: "Nome del locale", it: "Bal folk", en: "Bal folk", de: "Bal folk", link: "" },
+  { date: "2026-10-30", project: "roma", place: "Roma", venue: "La Mistica", it: "Bal folk", en: "Bal folk", de: "Bal folk" },
+  { date: "2026-12-04", project: "archaic", place: "Roma", venue: "Pianeta Sonoro", it: "Concerto", en: "Concert", de: "Konzert" },
+  { date: "2026-12-18", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
+  { date: "2026-12-19", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
+  { date: "2026-12-20", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
+  { date: "2026-12-30", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
+  { date: "2026-12-31", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
+  { date: "2027-01-14", project: "altro", place: "Langenthal", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
+  { date: "2027-01-21", project: "altro", place: "Winterthur", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
+  { date: "2027-01-23", project: "altro", place: "Winterthur", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
+  { date: "2027-01-24", project: "altro", place: "Winterthur", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
 ];
 
 window.SITE_NEWS = [
-  { it: "Nuovo sito online: progetti, video e date in un posto solo.", en: "New website online: projects, videos and dates in one place." },
+  { it: "Nuovo sito online: progetti, video e date in un posto solo.", en: "New website online: projects, videos and dates in one place.", de: "Neue Website online: Projekte, Videos und Termine an einem Ort." },
 ];
