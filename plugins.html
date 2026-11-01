@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plugins · KarmaPsy, KarmaBass, KarmaKick</title>
+<meta name="description" content="KarmaPsy, KarmaBass, KarmaKick and more: audio plugins by Valerio Rodelli. VST3 and AU for Mac and Windows.">
+<link rel="canonical" href="https://valeriorodelli.net/plugins.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Plugins · KarmaPsy, KarmaBass, KarmaKick">
+<meta property="og:description" content="KarmaPsy, KarmaBass, KarmaKick and more: audio plugins by Valerio Rodelli. VST3 and AU for Mac and Windows.">
+<meta property="og:url" content="https://valeriorodelli.net/plugins.html">
+<meta property="og:image" content="https://valeriorodelli.net/assets/psy.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css?v=8">
+<style>
+  .pl-hero { padding: 64px 0 0; text-align: center; background: radial-gradient(60% 420px at 50% 0, rgba(155,107,255,.28), transparent); }
+  .pl-hero h1 { font-size: clamp(56px, 11vw, 120px); margin: 6px 0 12px; }
+  .pl-hero .lead { margin: 0 auto 24px; font-size: 20px; max-width: 560px; }
+  .pl-hero .meta { color: var(--muted); font-size: 14px; margin: 16px 0 34px; }
+  .btn.off { background: var(--panel); border: 1px solid var(--violet); color: var(--text); }
+  .shot { position: relative; display: block; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(155,107,255,.18); }
+  .shot img { display: block; width: 100%; }
+  .zone { position: absolute; border: 2px solid var(--teal); border-radius: 8px; background: rgba(58,214,194,.1); opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .zone.on { opacity: 1; }
+  .z-play { left: 1%; top: 10%; width: 98%; height: 14.4%; }
+  .z-osc { left: 1%; top: 25.2%; width: 71.6%; height: 24.3%; }
+  .z-filter { left: 1%; top: 50.6%; width: 48.8%; height: 14.5%; }
+  .z-lfo { left: 1%; top: 66%; width: 82%; height: 17.8%; }
+  .z-dice { left: 81.8%; top: 66%; width: 17%; height: 17.8%; }
+  .z-fill { left: 40%; top: 84.6%; width: 42.6%; height: 14.2%; }
+  .parts { display: grid; gap: 10px; grid-template-columns: repeat(3, 1fr); margin-top: 20px; }
+  @media (max-width: 760px) { .parts { grid-template-columns: 1fr; } }
+  .part { display: block; text-align: left; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; color: var(--text); font: inherit; cursor: pointer; }
+  .part.on, .part:hover { border-color: var(--teal); }
+  .part b { color: var(--teal); margin-right: 8px; }
+  .part .pt { font-weight: 700; font-size: 14px; letter-spacing: .06em; }
+  .part .pd { display: block; color: var(--muted); font-size: 15px; margin-top: 6px; }
+  .nums { display: grid; gap: 18px; grid-template-columns: repeat(4, 1fr); }
+  @media (max-width: 640px) { .nums { grid-template-columns: 1fr 1fr; } }
+  .num b { display: block; font-size: 64px; line-height: 1; color: var(--violet); }
+  .num span { color: var(--muted); font-size: 15px; }
+  .big-price { font-size: 20px; font-weight: 700; margin: 0 0 22px; }
+  details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  summary { cursor: pointer; font-weight: 700; }
+  details p { color: var(--muted); margin: 10px 0 0; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="name" href="/">Valerio Rodelli</a>
+    <ul>
+      <li><a href="#karmapsy">KarmaPsy</a></li>
+      <li><a href="#specs"><span lang="en">Specs</span><span lang="it">Dettagli</span><span lang="de">Details</span></a></li>
+      <li><a href="#all"><span lang="en">All plugins</span><span lang="it">Tutti i plugin</span><span lang="de">Alle Plugins</span></a></li>
+      <li><a href="#contact"><span lang="en">Contact</span><span lang="it">Contatti</span><span lang="de">Kontakt</span></a></li>
+    </ul>
+    <div class="langs"><button data-set="en">EN</button><button data-set="it">IT</button><button data-set="de">DE</button></div>
+  </div>
+</nav>
+
+<header class="pl-hero" id="karmapsy">
+  <div class="wrap">
+    <span class="tag t-violet">KarmaStation</span>
+    <h1>KarmaPsy</h1>
+    <p class="lead"><span lang="en">A rolling lead and bass synth for psytrance. Hold one key: it plays the line.</span><span lang="it">Un synth di lead e bassi rolling per la psytrance. Tieni un tasto: la linea la suona lui.</span><span lang="de">Ein rollender Lead- und Basssynth für Psytrance. Halte eine Taste: Die Linie spielt er selbst.</span></p>
+    <p><span data-until="2026-11-09"><span class="btn off"><span lang="en">Out on 9 November</span><span lang="it">Esce il 9 novembre</span><span lang="de">Erscheint am 9. November</span></span></span><span data-from="2026-11-09"><a class="btn" href="https://karmastation.gumroad.com/l/karmapsy"><span lang="en">Get KarmaPsy</span><span lang="it">Prendi KarmaPsy</span><span lang="de">KarmaPsy holen</span></a></span><a class="btn ghost" href="#one-key"><span lang="en">See it play</span><span lang="it">Guardalo suonare</span><span lang="de">Sieh, wie er spielt</span></a></p>
+    <p class="meta"><span data-until="2026-12-01"><span lang="en">€19 until 30 November, then €29</span><span lang="it">19 € fino al 30 novembre, poi 29 €</span><span lang="de">19 € bis 30. November, dann 29 €</span></span><span data-from="2026-12-01">€29</span> · VST3 · AU · Standalone · Mac · Windows</p>
+    <a class="shot" href="#inside"><img src="assets/psy.jpg" alt="KarmaPsy" width="1180" height="720"></a>
+  </div>
+</header>
+
+<section id="one-key" style="margin-top:80px">
+  <div class="wrap split">
+    <div>
+      <span class="tag t-teal"><span lang="en">One key</span><span lang="it">Un tasto</span><span lang="de">Eine Taste</span></span>
+      <h2><span lang="en">That is the whole MIDI.</span><span lang="it">Tutto il MIDI è questo.</span><span lang="de">Das ist das ganze MIDI.</span></h2>
+      <p class="lead" style="margin-bottom:0"><span lang="en">One long note. Three LFOs do the rest, in time with your track. Lift your finger and it stops. Press again and it drops back in on the beat.</span><span lang="it">Una nota lunga. Il resto lo fanno tre LFO, a tempo col brano. Alzi il dito e si ferma. Premi di nuovo e rientra sul tempo.</span><span lang="de">Eine lange Note. Den Rest machen drei LFOs, im Takt deines Tracks. Finger hoch, und es stoppt. Wieder drücken, und es setzt auf dem Beat ein.</span></p>
+    </div>
+    <video src="assets/psy-one-key.mp4" controls playsinline preload="metadata" poster="assets/psy.jpg"></video>
+  </div>
+</section>
+
+<section id="inside">
+  <div class="wrap">
+    <span class="tag t-violet"><span lang="en">Inside</span><span lang="it">Dentro</span><span lang="de">Im Inneren</span></span>
+    <h2><span lang="en">Everything on one window.</span><span lang="it">Tutto in una finestra.</span><span lang="de">Alles in einem Fenster.</span></h2>
+    <p class="lead" style="margin-bottom:22px"><span lang="en">Pick a section and it lights up.</span><span lang="it">Scegli una sezione e si accende.</span><span lang="de">Wähle einen Bereich, und er leuchtet auf.</span></p>
+    <div class="shot"><img src="assets/psy.jpg" alt="KarmaPsy" width="1180" height="720" loading="lazy"><i class="zone z-play on" data-part="play"></i><i class="zone z-osc" data-part="osc"></i><i class="zone z-filter" data-part="filter"></i><i class="zone z-lfo" data-part="lfo"></i><i class="zone z-dice" data-part="dice"></i><i class="zone z-fill" data-part="fill"></i></div>
+    <div class="parts"><button class="part on" data-part="play"><b>1</b><span class="pt">PLAY</span><span class="pd"><span lang="en">Seven knobs to play it live: speed, filter, motion, decay, highs, sync, space.</span><span lang="it">Sette manopole per suonarlo dal vivo: speed, filter, motion, decay, highs, sync, space.</span><span lang="de">Sieben Regler zum Live-Spielen: Speed, Filter, Motion, Decay, Highs, Sync, Space.</span></span></button><button class="part" data-part="osc"><b>2</b><span class="pt">OSCILLATORS</span><span class="pd"><span lang="en">Wavetables for the talking leads, sync for the scream, unison, sub and noise.</span><span lang="it">Wavetable per i lead che parlano, sync per il grido, unison, sub e noise.</span><span lang="de">Wavetables für sprechende Leads, Sync für den Schrei, Unison, Sub und Noise.</span></span></button><button class="part" data-part="filter"><b>3</b><span class="pt">FILTER</span><span class="pd"><span lang="en">LP, BP or HP, with drive before it and distortion after it. This is the squelch.</span><span lang="it">LP, BP o HP, con drive prima e distorsione dopo. Da qui viene lo squelch.</span><span lang="de">LP, BP oder HP, mit Drive davor und Verzerrung danach. Hier entsteht der Squelch.</span></span></button><button class="part" data-part="lfo"><b>4</b><span class="pt">LFO 1 2 3</span><span class="pd"><span lang="en">Three LFOs locked to your song. One turns into hits: pick a pattern and that is your line.</span><span lang="it">Tre LFO agganciati al brano. Uno diventa colpi: scegli un pattern ed è la tua linea.</span><span lang="de">Drei LFOs, fest am Song. Einer wird zu Schlägen: Pattern wählen, und das ist deine Linie.</span></span></button><button class="part" data-part="dice"><b>5</b><span class="pt">DICE</span><span class="pd"><span lang="en">Out of ideas? Roll a dice on one LFO or on all three. Undo goes back one roll at a time.</span><span lang="it">Senza idee? Tira il dado su un LFO o su tutti e tre. Undo torna indietro un tiro alla volta.</span><span lang="de">Keine Idee? Würfle ein LFO oder alle drei neu. Undo geht Wurf für Wurf zurück.</span></span></button><button class="part" data-part="fill"><b>6</b><span class="pt">FILL</span><span class="pd"><span lang="en">At the end of the phrase: reverse, stutter, gate, rise, tape stop or throw. You choose how often.</span><span lang="it">A fine frase: reverse, stutter, gate, rise, tape stop o throw. Scegli tu ogni quanto.</span><span lang="de">Am Phrasenende: Reverse, Stutter, Gate, Rise, Tape Stop oder Throw. Du bestimmst, wie oft.</span></span></button></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap nums"><div class="num"><b>3</b><span><span lang="en">LFOs locked to your song</span><span lang="it">LFO agganciati al brano</span><span lang="de">LFOs fest am Song</span></span></div><div class="num"><b>7</b><span><span lang="en">knobs to play it live</span><span lang="it">manopole da suonare dal vivo</span><span lang="de">Regler zum Live-Spielen</span></span></div><div class="num"><b>6</b><span><span lang="en">kinds of fill</span><span lang="it">tipi di fill</span><span lang="de">Arten von Fills</span></span></div><div class="num"><b>6</b><span><span lang="en">notes in POLY</span><span lang="it">note in POLY</span><span lang="de">Noten in POLY</span></span></div></div>
+</section>
+
+<section id="specs">
+  <div class="wrap">
+    <h2><span lang="en">The details</span><span lang="it">I dettagli</span><span lang="de">Die Details</span></h2>
+    <p class="lead" style="margin-bottom:14px"><span lang="en">What it does, and what it does not do.</span><span lang="it">Cosa fa, e cosa non fa.</span><span lang="de">Was es kann, und was nicht.</span></p>
+    <div class="row"><div class="y"><span lang="en">Formats</span><span lang="it">Formati</span><span lang="de">Formate</span></div><div><span lang="en">VST3, Audio Unit and standalone on Mac. VST3 and standalone on Windows.</span><span lang="it">VST3, Audio Unit e standalone su Mac. VST3 e standalone su Windows.</span><span lang="de">VST3, Audio Unit und Standalone auf dem Mac. VST3 und Standalone unter Windows.</span></div></div><div class="row"><div class="y"><span lang="en">Systems</span><span lang="it">Sistemi</span><span lang="de">Systeme</span></div><div><span lang="en">macOS 11 or later, Apple Silicon and Intel. Windows 10 and 11, 64-bit.</span><span lang="it">macOS 11 o successivi, Apple Silicon e Intel. Windows 10 e 11, 64 bit.</span><span lang="de">macOS 11 oder neuer, Apple Silicon und Intel. Windows 10 und 11, 64 Bit.</span></div></div><div class="row"><div class="y"><span lang="en">Voices</span><span lang="it">Voci</span><span lang="de">Stimmen</span></div><div><span lang="en">MONO with glide, or POLY up to 6 notes.</span><span lang="it">MONO con glide, o POLY fino a 6 note.</span><span lang="de">MONO mit Glide oder POLY bis 6 Noten.</span></div></div><div class="row"><div class="y">Preset</div><div><span lang="en">Six families: acid, squelch, sync, zap, pluck, wavetable. Plus your own.</span><span lang="it">Sei famiglie: acid, squelch, sync, zap, pluck, wavetable. Più i tuoi.</span><span lang="de">Sechs Familien: Acid, Squelch, Sync, Zap, Pluck, Wavetable. Dazu deine eigenen.</span></div></div><div class="row"><div class="y"><span lang="en">Licence</span><span lang="it">Licenza</span><span lang="de">Lizenz</span></div><div><span lang="en">One key, 2 computers. No account, no internet needed to play.</span><span lang="it">Una chiave, 2 computer. Niente account, per suonare non serve internet.</span><span lang="de">Ein Schlüssel, 2 Computer. Kein Konto, zum Spielen kein Internet nötig.</span></div></div><div class="row"><div class="y"><span lang="en">Refund</span><span lang="it">Rimborso</span><span lang="de">Rückerstattung</span></div><div><span lang="en">30 days, no explanation needed.</span><span lang="it">30 giorni, senza spiegazioni.</span><span lang="de">30 Tage, ohne Begründung.</span></div></div><div class="row"><div class="y"><span lang="en">Not included</span><span lang="it">Non c’è</span><span lang="de">Nicht dabei</span></div><div><span lang="en">No AAX, so it does not run in Pro Tools.</span><span lang="it">Niente AAX, quindi non gira in Pro Tools.</span><span lang="de">Kein AAX, läuft also nicht in Pro Tools.</span></div></div>
+    <div style="margin-top:44px"><details><summary><span lang="en">How do I get my key?</span><span lang="it">Come ricevo la chiave?</span><span lang="de">Wie bekomme ich meinen Schlüssel?</span></summary><p><span lang="en">Your Gumroad receipt has a code. Paste it on the claim page and you get your key right away. Then click Activate in KarmaPsy.</span><span lang="it">Nella ricevuta di Gumroad c’è un codice. Lo incolli nella pagina indicata e ricevi subito la chiave. Poi premi Activate in KarmaPsy.</span><span lang="de">Auf deiner Gumroad-Quittung steht ein Code. Füge ihn auf der angegebenen Seite ein und du bekommst sofort deinen Schlüssel. Dann in KarmaPsy auf Activate klicken.</span></p></details><details><summary><span lang="en">Why a key, when KarmaKick has none?</span><span lang="it">Perché la chiave, se KarmaKick non ce l’ha?</span><span lang="de">Warum ein Schlüssel, wenn KarmaKick keinen hat?</span></summary><p><span lang="en">KarmaPsy is the first one with a key: the big shops ask for it. It works on 2 computers, and you can free one yourself from a web page.</span><span lang="it">KarmaPsy è il primo con la chiave: i negozi grandi la chiedono. Vale su 2 computer, e puoi liberarne uno da solo da una pagina web.</span><span lang="de">KarmaPsy ist das erste mit Schlüssel: Die grossen Shops verlangen das. Er gilt auf 2 Computern, und du kannst selbst einen über eine Webseite freigeben.</span></p></details><details><summary><span lang="en">What does it send online?</span><span lang="it">Cosa manda online?</span><span lang="de">Was sendet es online?</span></summary><p><span lang="en">When the computer is online, at most once every two weeks: an anonymous computer code and the computer’s name, only to count computers. Your purchase email is stored with your key.</span><span lang="it">Quando il computer è online, al massimo ogni due settimane: un codice anonimo e il nome del computer, solo per contare i computer. L’e-mail di acquisto resta salvata con la chiave.</span><span lang="de">Wenn der Computer online ist, höchstens alle zwei Wochen: ein anonymer Code und der Computername, nur um Computer zu zählen. Die Kauf-E-Mail wird mit dem Schlüssel gespeichert.</span></p></details><details><summary><span lang="en">Can I sell the music I make with it?</span><span lang="it">Posso vendere la musica che faccio con questo?</span><span lang="de">Darf ich damit gemachte Musik verkaufen?</span></summary><p><span lang="en">Yes. No royalties, no credit required.</span><span lang="it">Sì. Niente royalty, nessun credito richiesto.</span><span lang="de">Ja. Keine Tantiemen, keine Nennung nötig.</span></p></details></div>
+    <p class="big-price" style="margin-top:44px">KarmaPsy · <span data-until="2026-12-01"><span lang="en">€19 until 30 November, then €29</span><span lang="it">19 € fino al 30 novembre, poi 29 €</span><span lang="de">19 € bis 30. November, dann 29 €</span></span><span data-from="2026-12-01">€29</span></p>
+    <p><span data-until="2026-11-09"><span class="btn off"><span lang="en">Out on 9 November</span><span lang="it">Esce il 9 novembre</span><span lang="de">Erscheint am 9. November</span></span></span><span data-from="2026-11-09"><a class="btn" href="https://karmastation.gumroad.com/l/karmapsy"><span lang="en">Get KarmaPsy</span><span lang="it">Prendi KarmaPsy</span><span lang="de">KarmaPsy holen</span></a></span></p>
+  </div>
+</section>
+
+<section id="all">
+  <div class="wrap">
+    <span class="tag t-violet">KarmaStation</span>
+    <h2><span lang="en">The other plugins</span><span lang="it">Gli altri plugin</span><span lang="de">Die anderen Plugins</span></h2>
+    <p class="lead"><span lang="en">All of them made by me, on my own. No company behind this. Just me.</span><span lang="it">Tutti fatti da me, da solo. Nessuna azienda dietro. Solo io.</span><span lang="de">Alle von mir gebaut, allein. Keine Firma dahinter. Nur ich.</span></p>
+    <div class="plugins"><a class="plugin" href="https://karmastation.gumroad.com/l/karmabass"><img src="assets/bass.jpg" alt="KarmaBass" loading="lazy"><div><h3>KarmaBass</h3><p><span lang="en">Mono bass synth. All on one screen, and it ducks under KarmaKick with one button.</span><span lang="it">Synth di basso mono. Tutto in una schermata, e si abbassa sotto KarmaKick con un pulsante.</span><span lang="de">Mono-Basssynth. Alles auf einem Screen, und er duckt sich per Knopfdruck unter KarmaKick.</span></p><span class="price">€19</span></div></a><a class="plugin" href="https://karmastation.gumroad.com/l/karmakick"><img src="assets/kick.jpg" alt="KarmaKick" loading="lazy"><div><h3>KarmaKick</h3><p><span lang="en">Kick drum synth. No samples, few knobs, no manual.</span><span lang="it">Synth di cassa. Niente campioni, poche manopole, nessun manuale.</span><span lang="de">Kick-Synth. Keine Samples, wenige Regler, kein Handbuch.</span></p><span class="price"><span lang="en">Free</span><span lang="it">Gratis</span><span lang="de">Gratis</span></span></div></a><a class="plugin" href="https://karmastation.gumroad.com/l/karmafade"><img src="assets/fade.jpg" alt="KarmaFade" loading="lazy"><div><h3>KarmaFade</h3><p><span lang="en">Fade out on cue, with your hands full. Made for the stage.</span><span lang="it">Sfuma al momento giusto, anche a mani piene. Fatto per il palco.</span><span lang="de">Ausblenden auf Stichwort, mit vollen Händen. Für die Bühne gemacht.</span></p><span class="price">€9</span></div></a><a class="plugin" href="https://karmastation.gumroad.com/l/karmabrake"><img src="assets/brake.jpg" alt="KarmaBrake" loading="lazy"><div><h3>KarmaBrake</h3><p><span lang="en">The turntable stop, as a plugin.</span><span lang="it">La frenata del giradischi, in un plugin.</span><span lang="de">Der Plattenspieler-Stopp als Plugin.</span></p><span class="price">€9</span></div></a></div>
+    <p style="margin-top:22px"><a href="https://karmastation.gumroad.com"><span lang="en">The whole shop on Gumroad →</span><span lang="it">Tutto il negozio su Gumroad →</span><span lang="de">Der ganze Shop auf Gumroad →</span></a></p>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <p class="big"><span lang="en">Questions, problems, refunds.</span><span lang="it">Domande, problemi, rimborsi.</span><span lang="de">Fragen, Probleme, Rückerstattungen.</span></p>
+    <p><a href="mailto:karmastation.music@gmail.com">karmastation.music@gmail.com</a></p>
+    <p class="small"><a href="/" style="color:inherit">← Valerio Rodelli</a> · © 2026</p>
+  </div>
+</footer>
+<script src="assets/site.js?v=8"></script>
+<script>
+(function () {
+  var today = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll('[data-from]').forEach(function (e) { if (today < e.dataset.from) e.hidden = true; });
+  document.querySelectorAll('[data-until]').forEach(function (e) { if (today >= e.dataset.until) e.hidden = true; });
+  var tiles = document.querySelectorAll('.part'), zones = document.querySelectorAll('.zone');
+  tiles.forEach(function (b) { b.addEventListener('click', function () {
+    tiles.forEach(function (x) { x.classList.toggle('on', x === b); });
+    zones.forEach(function (z) { z.classList.toggle('on', z.dataset.part === b.dataset.part); });
+  }); });
+})();
+</script>
+<script data-goatcounter="https://valeriorodelli.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
