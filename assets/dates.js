@@ -14,10 +14,10 @@ window.SITE_DATES = [
   { date: "2026-12-20", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111", poster: "assets/superheldinnen-flyer.jpg" },
   { date: "2026-12-30", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111", poster: "assets/superheldinnen-flyer.jpg" },
   { date: "2026-12-31", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111", poster: "assets/superheldinnen-flyer.jpg" },
-  { date: "2027-01-14", project: "altro", place: "Langenthal", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111", poster: "assets/superheldinnen-flyer.jpg" },
-  { date: "2027-01-21", project: "altro", place: "Winterthur", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111", poster: "assets/superheldinnen-flyer.jpg" },
-  { date: "2027-01-23", project: "altro", place: "Winterthur", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111", poster: "assets/superheldinnen-flyer.jpg" },
-  { date: "2027-01-24", project: "altro", place: "Winterthur", venue: "", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111", poster: "assets/superheldinnen-flyer.jpg" },
+  { date: "2027-01-14", project: "altro", place: "Langenthal", venue: "Stadttheater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111", poster: "assets/superheldinnen-flyer.jpg" },
+  { date: "2027-01-21", project: "altro", place: "Winterthur", venue: "Kellertheater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111", poster: "assets/superheldinnen-flyer.jpg" },
+  { date: "2027-01-23", project: "altro", place: "Winterthur", venue: "Kellertheater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111", poster: "assets/superheldinnen-flyer.jpg" },
+  { date: "2027-01-24", project: "altro", place: "Winterthur", venue: "Kellertheater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111", poster: "assets/superheldinnen-flyer.jpg" },
   { date: "2027-02-27", project: "cirque", place: "Winterthur", venue: "Theater am Gleis", it: "Smash – A Relationshit", en: "Smash – A Relationshit", de: "Smash – A Relationshit" },
 ];
 
