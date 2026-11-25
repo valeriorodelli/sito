@@ -53,6 +53,7 @@
       var d = g.d, col = cols[d.project] || cols.altro, img = imgs[d.project];
       var label = names[d.project] ? '<span lang="en">' + esc(d.en) + '</span><span lang="it">' + esc(d.it || d.en) + '</span><span lang="de">' + esc(d.de || d.en) + '</span>' : esc((d.en.split('–')[1] || '').trim());
       var title = names[d.project] ? names[d.project] : esc((d.en.split('–')[0] || d.en).trim());
+      if (d.poster) img = '';
       var bg = img ? 'background-image:linear-gradient(180deg,rgba(14,13,18,.55),rgba(14,13,18,.92) 65%),url(' + img + ')' : 'background-image:linear-gradient(135deg,' + col + '33,rgba(14,13,18,.95) 70%)';
       var rows = g.places.map(function (p) {
         return '<li><b>' + esc(p.place) + '</b>' + (p.venue ? ' · ' + esc(p.venue) : '') + '<span><span lang="en">' + days(p.dates, 'en-GB') + '</span><span lang="it">' + days(p.dates, 'it-IT') + '</span><span lang="de">' + days(p.dates, 'de-CH') + '</span></span></li>';
@@ -63,10 +64,14 @@
       return open + ' style="--c:' + col + ';' + bg + '">' +
         '<span class="dlabel">' + label + '</span>' +
         '<span class="dtitle">' + title + '</span>' +
+        (d.poster ? '<img class="dposter" src="' + esc(d.poster) + '" alt="' + esc(title) + ' – ' + esc(d.en) + '" loading="lazy">' : '') +
         '<span class="dbig"><span lang="en">' + big(g, 'en-GB') + '</span><span lang="it">' + big(g, 'it-IT') + '</span><span lang="de">' + big(g, 'de-CH') + '</span></span>' +
         '<ul class="dplaces">' + rows + '</ul>' + close;
     }).join('') + '</div>';
   }
+  // blocchi con data-until="AAAA-MM-GG": spariscono il giorno dopo
+  var oggi = new Date(); oggi.setHours(0, 0, 0, 0);
+  [].forEach.call(document.querySelectorAll('[data-until]'), function (el) { if (new Date(el.getAttribute('data-until') + 'T00:00:00') < oggi) el.style.display = 'none'; });
   var nb = document.getElementById('news-list');
   if (nb) nb.innerHTML = (window.SITE_NEWS || []).map(function (n) { return '<li><span lang="en">' + esc(n.en) + '</span><span lang="it">' + esc(n.it || n.en) + '</span><span lang="de">' + esc(n.de || n.en) + '</span></li>'; }).join('');
 })();

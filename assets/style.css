@@ -121,6 +121,7 @@
   .dates { display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
   .date-card { position: relative; display: flex; flex-direction: column; gap: 6px; min-height: 280px; padding: 22px; border-radius: 18px; border: 1px solid var(--line); border-top: 4px solid var(--c); background-color: var(--panel); background-size: cover; background-position: center; color: var(--text); overflow: hidden; transition: transform .15s; }
   a.date-card:hover { text-decoration: none; transform: translateY(-3px); }
+  .dposter { display: block; width: 100%; max-width: 360px; margin: 10px 0 4px; border-radius: 10px; border: 1px solid rgba(255,255,255,.15); }
   .dlabel { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--c); }
   .dtitle { font-size: 28px; font-weight: 800; line-height: 1.1; letter-spacing: -.01em; }
   .dbig { margin-top: 8px; display: block; }

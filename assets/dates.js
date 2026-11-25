@@ -2,12 +2,13 @@
   DATE E NOVITÀ — l'unico file da aggiornare.
   Una riga per data. Formato data: "AAAA-MM-GG". Le date passate spariscono da sole
   dalla lista "In arrivo". project: archaic | cirque | karma | roma | altro.
+  poster: "assets/nome.jpg" (facoltativo) mostra la locandina nel riquadro della data.
   Le novità (news) restano finché non le togli.
 */
 window.SITE_DATES = [
   // { date: "2026-11-21", project: "roma", place: "Bern", venue: "Nome del locale", it: "Bal folk", en: "Bal folk", de: "Bal folk", link: "" },
   { date: "2026-10-30", project: "roma", place: "Roma", venue: "La Mistica", it: "Bal folk", en: "Bal folk", de: "Bal folk" },
-  { date: "2026-12-04", project: "archaic", place: "Roma", venue: "Pianeta Sonoro", it: "Concerto", en: "Concert", de: "Konzert" },
+  { date: "2026-12-04", project: "archaic", place: "Roma", venue: "Pianeta Sonoro", it: "Liquida – live", en: "Liquida – live", de: "Liquida – live", poster: "assets/archaic-liquida-4-dicembre.jpg" },
   { date: "2026-12-18", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
   { date: "2026-12-19", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
   { date: "2026-12-20", project: "altro", place: "Bern", venue: "Schlachthaus Theater", it: "Superheldinnen – Club 111", en: "Superheldinnen – Club 111", de: "Superheldinnen – Club 111" },
